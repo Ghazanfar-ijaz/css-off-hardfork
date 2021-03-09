@@ -11,15 +11,81 @@
 
 body {
   background: var(--blue);
+  background-image: url(https://raw.githubusercontent.com/Ghazanfar-ijaz/css-off-hardfork/main/img/blue-splash.png);
+  background-repeat: no-repeat;
+  background-position: top;
   color: #fff;
   font-family: Atma, sans-serif;
   margin: 0;
   font-size: 1.5rem;
 }
 
+nav ul {
+  background-color: var(--green);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  opacity: 0.8;
+}
+
+nav li {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+}
+
+nav a {
+    color: white;
+  }
+
+  header {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--orange);
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+section {
+  padding: 2rem;
+}
+
+h1 {
+  color: var(--orange)
+  margin: auto;
+  font-size: 10rem;
+  text-align: center;
+  display: flex;
+}
+
+header h1,p {
+  margin: 0;
+}
+
+p {
+  color: var(--orange)
+  margin: auto;
+  font-size: 4rem;
+  text-align: center;
+}
+
 h1,
 h2 {
   margin-top: 0;
+}
+  
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 8rem;
+  padding-top: 55px;
+  
 }
 
 h1,
@@ -30,7 +96,21 @@ button {
   letter-spacing: 2px;
 }
 
+.obstacles {
+  display: flex;
+  background: var(--orange);
+  height: 140vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px 0;
+  margin-top: 0;
+}
+
 /* ... Your turn! ... */
+
+
+
 
 @media (min-width: 640px) {
 }
