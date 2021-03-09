@@ -7,6 +7,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  text-align: center;
 }
 
 body {
@@ -62,6 +64,7 @@ h1 {
   font-size: 10rem;
   text-align: center;
   display: flex;
+  text-shadow: 3px 3px white;
 }
 
 header h1,p {
@@ -73,6 +76,7 @@ p {
   margin: auto;
   font-size: 4rem;
   text-align: center;
+  text-shadow: 3px 3px white;
 }
 
 h1,
@@ -83,8 +87,10 @@ h2 {
 h2 {
   color: white;
   text-align: center;
-  font-size: 8rem;
-  padding-top: 55px;
+  font-size: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  text-shadow: 6px 6px brown;
   
 }
 
@@ -96,9 +102,25 @@ button {
   letter-spacing: 2px;
 }
 
-.obstacles {
+
+
+
+#obstacles {
   display: flex;
   background: var(--orange);
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px 0;
+  margin-top: 0;
+  
+}
+
+
+#prizes {
+  display: flex;
+  background: var(--green);
   height: 140vh;
   align-items: center;
   justify-content: center;
@@ -107,10 +129,55 @@ button {
   margin-top: 0;
 }
 
+#apply {
+  display: flex;
+  background: var(--blue);
+  height: 140vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px 0;
+  margin-top: 0;
+}
+
+#obstacles article {
+background-color: var(--green);
+margin: 2rem;
+border-radius: 1rem;
+display: inline-block;
+}
+
+#obstacles a {
+  color: white;
+  letter-spacing: 4px;
+}
+
+#prizes article {
+background-color: var(--green);
+margin: 2rem;
+border: 3px dashed var(--yellow);
+display: inline-block;
+padding: 1rem 0;
+}
+
+
+#prizes a {
+  color: white;
+  letter-spacing: 4px;
+}
+
+footer {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--yellow);
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 /* ... Your turn! ... */
-
-
-
 
 @media (min-width: 640px) {
 }
