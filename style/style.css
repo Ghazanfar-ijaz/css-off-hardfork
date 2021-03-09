@@ -166,6 +166,16 @@ padding: 1rem 0;
   letter-spacing: 4px;
 }
 
+.prizes img {
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.prizes img:hover {
+-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
 footer {
   color: black;
   display: flex;
