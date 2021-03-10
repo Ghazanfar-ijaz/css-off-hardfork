@@ -7,13 +7,21 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
   background: var(--blue);
-  background-image: url(https://raw.githubusercontent.com/Ghazanfar-ijaz/css-off-hardfork/main/img/blue-splash.png);
   background-repeat: no-repeat;
   background-position: top;
   color: #fff;
@@ -22,150 +30,153 @@ body {
   font-size: 1.5rem;
 }
 
-nav ul {
-  background-color: var(--green);
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  opacity: 0.8;
-}
-
-nav li {
-  font-size: 30px;
-  text-transform: uppercase;
-  color: white;
-}
-
-nav a {
-    color: white;
-  }
-
-  header {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: var(--orange);
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-}
-
-section {
-  padding: 2rem;
-}
-
-h1 {
-  color: var(--orange)
-  margin: auto;
-  font-size: 10rem;
-  text-align: center;
-  display: flex;
-  text-shadow: 3px 3px white;
-}
-
-header h1,p {
-  margin: 0;
-}
-
-p {
-  color: var(--orange)
-  margin: auto;
-  font-size: 4rem;
-  text-align: center;
-  text-shadow: 3px 3px white;
-}
-
 h1,
 h2 {
   margin-top: 0;
-}
-  
-h2 {
-  color: white;
-  text-align: center;
-  font-size: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  text-shadow: 6px 6px brown;
-  
 }
 
 h1,
 h2,
 h1 + p,
 button {
+  text-align: center;
   font-family: Bangers, sans-serif;
   letter-spacing: 2px;
 }
 
-
-
-
-#obstacles {
-  display: flex;
-  background: var(--orange);
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 100px 0;
-  margin-top: 0;
-  
+.wrap {
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: 64rem;
 }
 
+.apply wrap {
+max-width: 50ch;
+}
 
-#prizes {
+header {
+  min-height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/Ghazanfar-ijaz/css-off-hardfork/main/img/blue-splash.png);
+  background-size: cover;
+  background-position: center center;
+  color: var(--orange);
+  padding-top: 50px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;
+  text-shadow: 2px 2px 0 white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: var(--green);
-  height: 140vh;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 100px 0;
-  margin-top: 0;
+  z-index: 2;
+  opacity: 0.8;
 }
 
-#apply {
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  background: var(--blue);
-  height: 140vh;
+  text-transform: uppercase;
+  justify-content: space-around;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: non;
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    transition: transfom 0.6s;
+  }
+
+nav li:nth-child(odd) a:hover {
+transform: scale(1.5) rotate(-5deg);
+}
+
+nav li:nth-child(even) a:hover {
+transform: scale(1.5) rotate(-5deg);
+}
+
+h1 {
+  margin: 0;
+  font-size: 6rem;
+}
+
+h1 + p {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+h3 a {
+  color: #fff;
+}
+
+section {
+padding: 4rem 0 6rem;
+border-top: 7px solid rgba(0, 0, 0, 0.06);
+}
+  
+.obstacles {
+  background: var(--orange);
+  align-items: center;
+}
+
+.grid article {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.obstacles article {
+background-color: var(--green);
+margin-bottom: 2rem;
+border-radius: 1.5rem;
+transition: 0.4s;
+}
+
+.obstacles article:hover {
+background: var(--yellow);
+color: var(--orange)
+}
+
+.obstacles-title a {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.prizes {
+  background: var(--green);
+}
+
+.prizes article {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 100px 0;
-  margin-top: 0;
+  border: 2px dashed var(--yellow)
 }
 
-#obstacles article {
-background-color: var(--green);
-margin: 2rem;
-border-radius: 1rem;
-display: inline-block;
+.prizes article img {
+  transition: 1s;
 }
 
-#obstacles a {
-  color: white;
-  letter-spacing: 4px;
+.prizes article:hover img {
+  transform: rotate(360deg);
 }
 
-#prizes article {
-background-color: var(--green);
-margin: 2rem;
-border: 3px dashed var(--yellow);
-display: inline-block;
-padding: 1rem 0;
-}
-
-
-#prizes a {
-  color: white;
-  letter-spacing: 4px;
-}
-
+/*
 .prizes img {
   -webkit-transition: -webkit-transform .8s ease-in-out;
           transition:         transform .8s ease-in-out;
@@ -175,19 +186,76 @@ padding: 1rem 0;
 -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
 }
+*/
 
-footer {
-  color: black;
-  display: flex;
-  flex-direction: column;
+.apply img {
+  display: block;
+  margin: auto;
+}
+
+input {
+  font: inherit;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+width: 100%;
+padding: 1rem;
+background: var(--orange);
+border: none;
+border-radius: 0.5rem;
+margin-bottom: 1rem;
+color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder {
+  color: #fff;
+}
+
+button {
+  border-radius: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
   background-color: var(--yellow);
-  align-items: center;
-  justify-content: center;
+  font-size: 1.5rem;
+  text-shadow: 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  transition: 0.6s;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--yellow);
+  color: white;
 }
 
 
+footer {
+  text-align: center;
+  color: black;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  background: var(--yellow);
+  border-top: 0.5rem solid rgba(0, 0, 0, 0.6s)
+}
 
-/* ... Your turn! ... */
 
 @media (min-width: 640px) {
+  .grid {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .grid article {
+    flex: 1;
+  }
 }
